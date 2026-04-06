@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            🎮 Tic-Tac-Toe
+        </div>
+        <div class="scoreboard">
+            <span>❌ X: <span id="score-x">0</span></span>
+            <span>⭕ O: <span id="score-o">0</span></span>
+        </div>
+        <div id="turn-indicator">Your Turn (O)</div>
+        <div class="game">
+            <div class="game-buttons">
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+            </div>
+            <button id="reset-btn">Reset</button>
+        </div>
+    </div>
+    <div class="popup hide">
+        <div class="popup-content">
+            <h2 id="winner-msg"></h2>
+            <button id="new-game-btn">New Game</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <audio id="click-sound" src="https://www.fesliyanstudios.com/play-mp3/387"></audio>
+    <audio id="win-sound" src="https://www.fesliyanstudios.com/play-mp3/438"></audio>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e2f, #3a0ca3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;   /* FIX */
+    padding: 20px;       /* FIX (adds breathing space) */
+}
+
+/* Container */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Title */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Game board */
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Grid */
+.game-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* Buttons (cells) */
+.btn {
+    height: 100px;
+    width: 100px;
+    background: #2a2a40;
+    border: none;
+    border-radius: 15px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Hover effect */
+.btn:hover {
+    background: #3f3f5a;
+    transform: scale(1.05);
+}
+
+/* Click effect */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Reset button */
+#reset-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    background: #7209b7;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+#reset-btn:hover {
+    background: #560bad;
+}
+
+/* Winner message */
+h2 {
+    margin-top: 15px;
+    color: #00ffcc;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Hide class */
+.hide {
+    display: none;
+}
+
+/* Popup box */
+.popup-content {
+    background: #1e1e2f;
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: scaleUp 0.3s ease;
+}
+
+/* Animation */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Winner text */
+#winner-msg {
+    color: #00ffcc;
+    margin-bottom: 20px;
+}
+
+/* Button */
+#new-game-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #7209b7;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#new-game-btn:hover {
+    background: #560bad;
+}
+
+.btn.X {
+    color: #ff4d6d;
+    text-shadow: 0 0 10px #ff4d6d;
+}
+
+.btn.O {
+    color: #00f5d4;
+    text-shadow: 0 0 10px #00f5d4;
+}
+.win {
+    background: #00ffcc !important;
+    color: #000 !important;
+    transform: scale(1.1);
+}
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+#turn-indicator {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Smooth fade for popup */
+.popup-content {
+    animation: scaleUp 0.3s ease, fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .game-buttons {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    .btn {
+        height: 80px;
+        width: 80px;
+        font-size: 2rem;
+    }
+}
