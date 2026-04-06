@@ -69,7 +69,7 @@ index.html
 
 ## 📸 Screenshots
 
-*(Add screenshots here for better presentation)*
+![Game Screenshot](https://github.com/Bittu169/Tic-Tac-Toe_Game/blob/main/Screenshot%202026-04-06%20175217.png?raw=true)
 
 ---
 
